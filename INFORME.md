@@ -2,12 +2,15 @@
 
 Este informe compara el tiempo del Sudoku en versión secuencial con tres versiones hechas con MPI. Todas las pruebas usan el mismo archivo `seeds.txt` (30 tableros), la misma máquina y el contenedor del taller.
 
-## Entorno
+# Entorno
 
-- Equipo: Windows con Docker Desktop (PowerShell), 8 procesadores lógicos (`nproc` = 8).
-- Versión del contenedor: `augustosalazar/slim-mpi:2`, digest `sha256:a196b8fd2aec025fa393bc517ef7f541f4dbe70c8b42c06639289fbb9f7ff94d`.
-- Repeticiones por medición: 3.
-- Valor de `N` elegido: **8**. Lo dio `detectar_procesos_mpi.py`: con N = 1 la mediana fue 5,843 s, con N = 2 fue 3,323 s y con N = 8 fue 1,603 s. Por eso usamos N = 8 en las tres versiones MPI.
+* Equipo: lordoops
+* Procesador: AMD Ryzen 3 3100 de 4 núcleos (3,59 GHz), con 8 procesadores lógicos (`nproc` = 8)
+* Memoria RAM: 32 GB
+* Sistema operativo: Windows de 64 bits (x64), con Docker Desktop y PowerShell
+* Versión del contenedor: `augustosalazar/slim-mpi:2`
+* Cantidad de repeticiones por medición: 3
+* Valor común de `N` elegido: 8. Lo dio `detectar_procesos_mpi.py`: con N = 1 la mediana fue 5,843 s, con N = 2 fue 3,323 s y con N = 8 fue 1,603 s.
 
 ## Resultados
 
